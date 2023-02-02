@@ -1,6 +1,6 @@
 // board
 
-let blockSize = 25;
+let blockSize = 4;
 let rows = 20;
 let cols = 20;
 let board;
@@ -36,10 +36,10 @@ function update() {
     if (gameOver) {
         return;
     }
-    context.fillStyle="black";
+    context.fillStyle="#00B3B6";
     context.fillRect(0,0, board.width, board.height);  
 
-    context.fillStyle="red";
+    context.fillStyle="#FFB3DE";
     context.fillRect(foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
@@ -55,7 +55,7 @@ function update() {
         snakeBody[0] = [snakeX, snakeY];
     }
     
-    context.fillStyle="lime";
+    context.fillStyle="rebeccapurple";
     snakeX += velocityX * blockSize;
     snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
@@ -99,3 +99,5 @@ function changeDirection(e) {
         velocityY = 0;
     }
 }
+
+
