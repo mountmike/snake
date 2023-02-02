@@ -39,7 +39,7 @@ function update() {
     context.fillStyle="#00B3B6";
     context.fillRect(0,0, board.width, board.height);  
 
-    context.fillStyle="#FFB3DE";
+    context.fillStyle="white";
     context.fillRect(foodX, foodY, blockSize, blockSize);
 
     if (snakeX == foodX && snakeY == foodY) {
